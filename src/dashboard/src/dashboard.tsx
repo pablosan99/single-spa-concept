@@ -34,8 +34,8 @@ export function Dashboard(props: Props) {
   };
 
   return (
-    <div className={"root"}>
-      <section className={"header"}>
+    <div className="root">
+      <section className="header">
         <h1 className={"title"}>Dashboard</h1>
         <button
           className={"button"}
@@ -44,7 +44,7 @@ export function Dashboard(props: Props) {
           {isOn ? "OFF" : "ON"}
         </button>
       </section>
-      {error && <section className={"error"}>{error}</section>}
+      {error && <section className="error">{error}</section>}
       <div className="dashboard">
         <div className="dashboardInner">
           {devicesConfiguration?.map((item, idx) => (
@@ -75,7 +75,7 @@ const DeviceRenderer = (props: ItemRendererProps) => {
         {data && data.Payload ? (
           <DisplayDeviceCard {...data.Payload} />
         ) : (
-          <div></div>
+          <div />
         )}
       </div>
     </div>
