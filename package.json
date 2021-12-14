@@ -1,0 +1,22 @@
+{
+  "name": "@spa/workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run start --workspace=@spa/root-config\" \"npm run start --workspace=@spa/header\" \"npm run start --workspace=@spa/dashboard\"",
+    "build": "npm run build --workspace=@spa/root-config --workspace=@spa/header",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "workspaces": [
+    "src/host",
+    "src/header",
+    "src/dashboard"
+  ],
+  "keywords": ["single-spa"],
+  "author": "Paweł Nowak",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.4.0"
+  }
+}
