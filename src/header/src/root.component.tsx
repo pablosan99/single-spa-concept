@@ -1,7 +1,8 @@
 const Root = (props) => {
   return (
     <section>
-      <div>AAAAAAla ma kota. {props.name} is mounted!</div>
+      <div>HEADER {props.name} is mounted!</div>
+      <div className="className">test message in header</div>
     </section>
   );
 };

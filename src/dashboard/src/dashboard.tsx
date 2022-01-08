@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { DeviceDescription } from "./models";
-import { useRecoilValue } from "recoil";
-import { deviceSelector } from "./dashboard-state";
+import React, {useState} from "react";
+import {DeviceDescription} from "./models";
+import {useRecoilValue} from "recoil";
+import {deviceSelector} from "./dashboard-state";
 // import styles from "./dashboard.module.css";
 
 type Props = {
@@ -12,7 +12,7 @@ type Props = {
 };
 
 export function Dashboard(props: Props) {
-  const { onStreamStart, onStreamStop, error, devicesConfiguration } = props;
+  const {onStreamStart, onStreamStop, error, devicesConfiguration} = props;
 
   const [isOn, setIsOn] = useState(false);
 
@@ -36,7 +36,7 @@ export function Dashboard(props: Props) {
   return (
     <div className="root">
       <section className="header">
-        <h1 className={"title"}>Dashboard</h1>
+        <h1 className={"title"}>Application Dashboard</h1>
         <button
           className={"button"}
           onClick={() => (isOn ? handleStreamOff() : handleFire())}
@@ -48,7 +48,7 @@ export function Dashboard(props: Props) {
       <div className="dashboard">
         <div className="dashboardInner">
           {devicesConfiguration?.map((item, idx) => (
-            <DeviceRenderer key={idx} id={idx + 1} item={item} />
+            <DeviceRenderer key={idx} id={idx + 1} item={item}/>
           ))}
         </div>
       </div>
@@ -75,7 +75,7 @@ const DeviceRenderer = (props: ItemRendererProps) => {
         {data && data.Payload ? (
           <DisplayDeviceCard {...data.Payload} />
         ) : (
-          <div />
+          <div/>
         )}
       </div>
     </div>

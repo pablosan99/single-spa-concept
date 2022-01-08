@@ -1,0 +1,3 @@
+console.log("importmap file loaded ...");
+const scriptEl = document.createElement("script");
+scriptEl.type = "systemjs-importmap", scriptEl.textContent = '\n{\n "imports": {\n   "react": "https://unpkg.com/react@17/umd/react.development.js",\n   "react-dom": "https://unpkg.com/react-dom@17/umd/react-dom.development.js",\n   "@spa/root-config": "http://localhost:9000/spa-root-config.js"\n  }\n}\n', document.head.appendChild(scriptEl);

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.9" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="wwwroot\dashboard-state.d.ts" />
+      <None Include="wwwroot\dashboard.d.ts" />
+      <None Include="wwwroot\data-provider.d.ts" />
+      <None Include="wwwroot\models.d.ts" />
+      <None Include="wwwroot\root.component.d.ts" />
+      <None Include="wwwroot\spa-dashboard.d.ts" />
+      <None Include="wwwroot\spa-dashboard.js" />
+      <None Include="wwwroot\spa-dashboard.js.LICENSE.txt" />
+      <None Include="wwwroot\spa-dashboard.js.map" />
+    </ItemGroup>
+</Project>

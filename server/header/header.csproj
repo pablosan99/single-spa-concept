@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.9" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="wwwroot\spa-header.js" />
+      <None Include="wwwroot\spa-header.js.LICENSE.txt" />
+      <None Include="wwwroot\spa-header.js.map" />
+    </ItemGroup>
+    
+</Project>
