@@ -2,3 +2,6 @@
 **/dist/**
 **/bin/**
 **/obj/**
+/server/**/bin/**
+/server/**/obj/**
+
