@@ -6,6 +6,11 @@
   "scripts": {
     "start": "concurrently \"npm run start --workspace=@spa/root-config\" \"npm run start --workspace=@spa/header\" \"npm run start --workspace=@spa/dashboard\"",
     "build": "npm run build --workspace=@spa/root-config --workspace=@spa/header --workspace=@spa/dashboard",
+    "copy-host": "copyfiles -f ./src/host/dist/*.* ./server/host/wwwroot/",
+    "copy-header": "copyfiles -f ./src/header/dist/*.* ./server/header/wwwroot/",
+    "copy-dashboard": "copyfiles -f ./src/dashboard/dist/*.* ./server/dashboard/wwwroot/",
+    "copy-all": "concurrently \"npm run copy-host\"  \"npm run copy-header\"  \"npm run copy-dashboard\"",
+    "build-and-copy": "npm run build && npm run copy-all",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "workspaces": [
@@ -13,10 +18,13 @@
     "src/header",
     "src/dashboard"
   ],
-  "keywords": ["single-spa"],
+  "keywords": [
+    "single-spa"
+  ],
   "author": "Paweł Nowak",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^6.4.0"
+    "concurrently": "^6.4.0",
+    "copyfiles": "^2.4.1"
   }
 }
